@@ -1,0 +1,30 @@
+<div class="user-info-banner">  
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-12">
+            <div class="user-page-struct">
+              <div class="user-form-cont">
+                <div class="user-form-title">
+                  <h2 class="text-center"> Enter the post details</h2>
+                </div>
+                <form enctype="multipart/form-data" [formGroup] = "postForm">
+                  <div class="form-group">
+                    <label for="email">Enter title</label>
+                    <input type="text" class="form-control" placeholder="Enter title" formControlName = "title">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Enter the post</label>
+                    <textarea cols="70" rows="10" class="form-control" placeholder="Enter post" formControlName = "post"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Enter profile image</label>
+                    <input type="file" (change) = "fileUpload($event)">
+                  </div>
+                  <button type="submit" class="btn btn-custom" (click) ="postFormSubmit()" >Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>  
+</div>

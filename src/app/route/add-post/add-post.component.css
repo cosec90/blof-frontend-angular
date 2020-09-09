@@ -1,0 +1,52 @@
+/* User Page start*/
+.user-info-banner{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background-color: #070c21;
+}
+.user-page-struct{
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+.user-form-cont{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding: 2%;
+   
+}
+.user-form-title{
+    color: #f5f5f5;
+}
+.form-group label{
+    color: #f5f5f5;
+}
+.btn-custom{
+    color: #f5f5f5;
+    background-color: #F97068;
+}
+.form-group input{
+    background-color: #0A102E;
+    border: .5px solid #0A102E ;
+    color: #f5f5f5;
+}
+.form-group textarea{
+    background-color: #0A102E;
+    border: .5px solid #0A102E ;
+    color: #f5f5f5;
+}
+.form-group input:focus{
+    background-color: #0A102E;
+    /* border: .5px solid #0A102E ; */
+}
+.form-group textarea{
+    background-color: #0A102E;
+    border: .5px solid #0A102E ;
+}
+.form-group textarea:focus{
+    background-color: #0A102E;
+    /* border: .5px solid #0A102E ; */
+}
+/*User Page end*/

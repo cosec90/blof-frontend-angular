@@ -1,0 +1,111 @@
+<div class="posts-banner">
+  <div class="post-page-struct">
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <div class="col-md-3">
+          <div class="sidebar-cont">
+            <div class="sidebar-prof">
+              <div class="sidebar-img"></div>
+              <div class="profile-name">
+                <h4>Shahid Mansuri</h4>
+                <p>@cosec90</p>
+              </div>
+            </div>
+            <div class="profile-contents">
+              <ul class="content-list" type="none">
+                <li class="content-li">New Stories</li>
+                <li class="content-li">Reading</li>
+                <li class="content-li">Profile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="blog-post-cont">
+            <!--Single post-->
+            <div class="post-cont">
+              <div class="post-cont-inner">
+                <div class="post-profile-cont">
+                  <div class="post-profile-img"></div>
+                  <div class="post-profile-info">
+                    <div class="post-profile-txt">
+                      <p>Shahid Mansuri</p>
+                      <p class="date">May 25</p>
+                    </div>
+                    <div class="post-contents">
+                        <h5>Post title</h5>
+                        <div class="save-button-cont">
+                          <button class="btn btn-custom">Read</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Single post-->
+
+             <!--Single post-->
+             <div  *ngFor= "let temp of listPost">
+             <div class="post-cont">
+              <div class="post-cont-inner">
+                <div class="post-profile-cont">
+                  <div class="post-profile-img"></div>
+                  <div class="post-profile-info">
+                    <div class="post-profile-txt">
+                      <p>{{username}}</p>
+                      <p class="date">May 25
+                        {{temp.pt_date | date:'d/M'}}
+                      </p>
+                    </div>
+                    <div class="post-contents">
+                        <h5>{{temp.pt_title}}</h5>
+                        <div class="save-button-cont">
+                          <button class="btn btn-custom" (click)="readPost(temp)"  >Read</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!--Single post-->
+
+            <!--Single post-->
+            <!-- <div class="post-cont">
+              <div class="post-cont-inner">
+                <div class="post-profile-cont">
+                  <div class="post-profile-img"></div>
+                  <div class="post-profile-info">
+                    <div class="post-profile-txt">
+                      <p>Shahid Mansuri</p>
+                      <p class="date">May 25</p>
+                    </div>
+                    <div class="post-contents">
+                        <h5>Post title</h5>
+                        <div class="save-button-cont">
+                          <button class="btn btn-custom">Click Here</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!--Single post-->
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="top-stories-cont">
+            <div class="top-stories-title">
+              <h4># Top Stories</h4>
+            </div>
+            <div class="top-stories-items">
+              <div class="top-stories-inner" *ngFor = "let stories of topStories">
+                <h6 (onclick) = "displayStoriesPost(stories)">{{stories.pt_title}}</h6>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

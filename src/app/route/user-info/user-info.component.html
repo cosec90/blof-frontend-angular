@@ -1,0 +1,42 @@
+<div class="user-info-banner">  
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-12">
+            <div class="user-page-struct">
+              <div class="user-form-cont">
+                <div class="user-form-title">
+                  <h2 class="text-center"> Enter the details {{message}}</h2>
+                </div>
+                <form enctype="multipart/form-data" [formGroup] = "profileForm">
+                  <div class="form-group">
+                    <label for="email">Enter Name</label>
+                    <input type="text" class="form-control" placeholder="Enter name" formControlName = "name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Enter last name</label>
+                    <input type="text" class="form-control" placeholder="Enter last name" formControlName = "lname">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Enter instagram Url</label>
+                    <input type="text" class="form-control" placeholder="Enter url" formControlName = "insta">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Enter github Url</label>
+                    <input type="text" class="form-control" placeholder="Enter url" formControlName = "git">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Enter bio</label>
+                    <textarea name="" cols="30" rows="5" class="form-control" placeholder="Enter bio" formControlName = "bio"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Enter profile image</label>
+                    <input type="file" (change) = "fileUpload($event)">
+                  </div>
+                  <button type="submit" class="btn btn-custom" (click) ="profileFormSubmit()" >Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>  
+</div>
